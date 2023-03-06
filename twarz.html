@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twarze</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .person {
+            position: relative;
+            aspect-ratio: 2 / 3;
+            display: flex;
+            height: 30rem;
+            overflow: hidden;
+        }
+
+        .person:hover .person--background {
+            filter: blur(2px);
+            transform: scale(1.2);
+        }
+
+        .person--content {
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            padding: 3rem;
+        }
+
+        .person--background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            object-fit: cover;
+            transform: scale(1.0);
+            transition: filter 0.3s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .person--content--header {
+            height: 25%;
+        }
+
+        .person--content--header--name {
+            position: relative;
+            margin-top: 2em;
+            font-size: 17px;
+            font-family: sans-serif;
+        }
+
+        .person--content--header--position {
+            position: relative;
+            margin-top: 1em;
+            font-size: 17px;
+            font-family: sans-serif;
+        }
+
+        .person--content--text {
+            position: relative;
+            height: 50%;
+            display: grid;
+        }
+
+        p {
+            margin-top: auto;
+            padding-bottom: 1em;
+        }
+
+        .person--content--brand {
+            height: 25%;
+            position: relative;
+        }
+
+        .person--content--brand--logo {
+            display: flex;
+            height: 4rem;
+            width: auto;
+            object-fit: contain;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="person">
+        <img src="../twarze/1.jpg" alt="1" class="person--background">
+        <div class="person--content">
+            <div class="person--content--header">
+                <h2 class="person--content--header--name">Imię Nazwisko</h2>
+                <h2 class="person--content--header--position">Stanowisko</h2>
+            </div>
+            <div class="person--content--text">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat odio
+                    corrupti at magnam fugiat, itaque quo maxime accusantium. Vero tempora excepturi perferendis, beatae
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, laudantium nemo eos quas tempore error optio eveniet cum quos enim omnis ex, eaque sed incidunt! Ut a ducimus vel expedita?
+                    provident natus. Delectus nihil rem voluptatum quo.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste est officia asperiores veniam
+                    architecto repudiandae, minus omnis numquam possimus placeat. Id, exercitationem! Officia dolorem
+                    sapiente ea recusandae! Odit, laborum commodi.</p>
+            </div>
+            <div class="person--content--brand">
+
+                <img src="Logo.png" alt="logo" class="person--content--brand--logo">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
